@@ -1,0 +1,187 @@
+ Microsoft Windows 10 Pro  Version 22H2 (OS Build 19045.2965)
+  
+==================================================================
+
+    Started on Tue 05/23/2023 at 14:03:56.38 
+	
+        [SFC /ScanNow] 
+	
+Beginning system scan.  This process will take some time.
+
+Results: 
+ 
+Windows Resource Protection did not find any integrity violations.
+ 
+==================================================================
+
+    Started on Tue 05/23/2023 at 14:04:58.52 
+
+        [DISM /online /cleanup-image /ScanHealth] 
+
+Deployment Image Servicing and Management tool
+Version: 10.0.19041.844
+
+Image Version: 10.0.19045.2965 
+ 
+No component store corruption detected.
+
+The operation completed successfully. 
+ 
+==================================================================
+
+    Started on Tue 05/23/2023 at 14:05:39.57 
+
+        [DISM /online /cleanup-image /RestoreHealth] 
+
+Deployment Image Servicing and Management tool
+Version: 10.0.19041.844
+
+Image Version: 10.0.19045.2965 
+ 
+The restore operation completed successfully.
+
+The operation completed successfully. 
+ 
+==================================================================
+
+The second "SFC /ScanNow" was skipped, as the first output the following:
+
+Windows Resource Protection did not find any integrity violations.
+ 
+==================================================================
+
+    Started on Tue 05/23/2023 at 14:06:20.55 
+
+        [ChkDsk /Scan]  
+ 
+The type of the file system is NTFS.
+ 
+Stage 1: Examining basic file system structure ... 
+378624 file records processed.                                                        
+File verification completed.
+Phase duration (File record verification): 3.53 seconds.
+2328 large file records processed.                                   
+Phase duration (Orphan file record recovery): 0.00 milliseconds.
+0 bad file records processed.                                     
+Phase duration (Bad file record checking): 0.04 milliseconds.
+ 
+Stage 2: Examining file name linkage ... 
+3222 reparse records processed.                                      
+506168 index entries processed.                                                       
+Index verification completed.
+Phase duration (Index verification): 7.46 seconds.
+0 unindexed files scanned.                                        
+Phase duration (Orphan reconnection): 227.54 milliseconds.
+0 unindexed files recovered to lost and found.                    
+Phase duration (Orphan recovery to lost and found): 0.08 milliseconds.
+3222 reparse records processed.                                      
+Phase duration (Reparse point and Object ID verification): 6.57 milliseconds.
+ 
+Stage 3: Examining security descriptors ... 
+Security descriptor verification completed.
+Phase duration (Security descriptor verification): 75.13 milliseconds.
+63773 data files processed.                                           
+Phase duration (Data attribute verification): 0.05 milliseconds.
+CHKDSK is verifying Usn Journal...
+35395488 USN bytes processed.                                                           
+Usn Journal verification completed.
+Phase duration (USN journal verification): 71.45 milliseconds.
+
+Windows has scanned the file system and found no problems.
+
+No further action is required.
+ 
+204799999 KB total disk space. 
+73444984 KB in 281716 files.
+192772 KB in 63774 indexes.
+0 KB in bad sectors.
+489075 KB in use by the system.
+65536 KB occupied by the log file.
+130673168 KB available on disk.
+ 
+4096 bytes in each allocation unit. 
+51199999 total allocation units on disk.
+32668292 allocation units available on disk.
+Total duration: 11.38 seconds (11382 ms).
+ 
+==================================================================
+ 
+    Started on Tue 05/23/2023 at 14:06:40.17 
+ 
+AutoReboot   
+ 
+FALSE       
+ 
+==================================================================
+ 
+        [Set AutoReboot = False] 
+ 
+Updating property(s) of '\\DESKTOP-RVU7BLR\ROOT\CIMV2:Win32_OSRecoveryConfiguration.Name="Microsoft Windows 10 Pro|C:\\Windows|\\Device\\Harddisk2\\Partition3"'
+Property(s) update successful.
+==================================================================
+ 
+AutoReboot   
+ 
+FALSE       
+ 
+==================================================================
+ 
+DebugInfoType   
+ 
+7              
+ 
+==================================================================
+
+        [Set DebugInfoType = 7]
+
+Updating property(s) of '\\DESKTOP-RVU7BLR\ROOT\CIMV2:Win32_OSRecoveryConfiguration.Name="Microsoft Windows 10 Pro|C:\\Windows|\\Device\\Harddisk2\\Partition3"'
+Property(s) update successful.
+==================================================================
+ 
+DebugInfoType   
+ 
+7              
+ 
+==================================================================
+
+        [WMIC PageFile list]
+
+AllocatedBaseSize=5120
+CurrentUsage=0
+Description=C:\pagefile.sys
+InstallDate=20230523003351.493727-360
+Name=C:\pagefile.sys
+PeakUsage=1
+Status=
+TempPageFile=FALSE
+ 
+==================================================================
+ 
+AutomaticManagedPagefile   
+ 
+TRUE                      
+ 
+==================================================================
+
+        [Set AutomaticManagedPagefile = True]
+
+Updating property(s) of '\\DESKTOP-RVU7BLR\ROOT\CIMV2:Win32_ComputerSystem.Name="DESKTOP-RVU7BLR"'
+Property(s) update successful.
+==================================================================
+ 
+AutomaticManagedPagefile   
+ 
+TRUE                      
+ 
+==================================================================
+
+        [BcdEdit /enum {badmemory}]
+
+RAM Defects
+-----------
+identifier              {badmemory}
+ 
+==================================================================
+
+    Finished on Tue 05/23/2023 at 14:06:41.97
+    It took 2 minutes and 45 seconds to complete the operations.
